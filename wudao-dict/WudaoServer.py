@@ -19,7 +19,7 @@ class WudaoServer:
         self.server.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
         # Singleton
         try:
-            self.server.bind(("0.0.0.0", 23764))
+            self.server.bind(("127.0.0.1", 23764))
         except OSError:
             print('OSError: Port has been used.')
             exit(0)
